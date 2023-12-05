@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marvel vs DC Superhero Battle</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+      font-size: 1.5em;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+
+    .hero {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px;
+      width: 300px;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Marvel vs DC Superhero Battle</h1>
+  </header>
+
+  <div class="container">
+    <div class="hero" id="marvel">
+      <h2>Marvel Hero</h2>
+      <img src="marvel-hero.jpg" alt="Marvel Hero">
+      <p>Bio: Some information about the Marvel hero.</p>
+      <ul>
+        <li>Strength: <span id="marvel-strength">80%</span></li>
+        <li>Magic: <span id="marvel-magic">70%</span></li>
+        <li>Speed: <span id="marvel-speed">85%</span></li>
+        <li>Intelligence: <span id="marvel-intelligence">90%</span></li>
+        <li>Power: <span id="marvel-power">75%</span></li>
+      </ul>
+    </div>
+
+    <div class="hero" id="dc">
+      <h2>DC Hero</h2>
+      <img src="dc-hero.jpg" alt="DC Hero">
+      <p>Bio: Some information about the DC hero.</p>
+      <ul>
+        <li>Strength: <span id="dc-strength">75%</span></li>
+        <li>Magic: <span id="dc-magic">80%</span></li>
+        <li>Speed: <span id="dc-speed">88%</span></li>
+        <li>Intelligence: <span id="dc-intelligence">85%</span></li>
+        <li>Power: <span id="dc-power">80%</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="result" id="result">The winner is: <span id="winner">?</span></div>
+
+  <script>
+    // Calculate the winner based on percentage values
+    function calculateWinner() {
+      const marvelTotal = calculateTotal('marvel');
+      const dcTotal = calculateTotal('dc');
+
+      if (marvelTotal > dcTotal) {
+        displayWinner('Marvel', marvelTotal);
+      } else {
+        displayWinner('DC', dcTotal);
+      }
+    }
+
+    // Calculate the total percentage for a hero
+    function calculateTotal(hero) {
+      const strength = parseInt(document.getElementById(`${hero}-strength`).innerText);
+      const magic = parseInt(document.getElementById(`${hero}-magic`).innerText);
+      const speed = parseInt(document.getElementById(`${hero}-speed`).innerText);
+      const intelligence = parseInt(document.getElementById(`${hero}-intelligence`).innerText);
+      const power = parseInt(document.getElementById(`${hero}-power`).innerText);
+
+      return (strength + magic + speed + intelligence + power) / 5;
+    }
+
+    // Display the winner and their total percentage
+    function displayWinner(winner, percentage) {
+      const resultElement = document.getElementById('result');
+      const winnerElement = document.getElementById('winner');
+
+      resultElement.style.color = '#333';
+      winnerElement.innerText = `${winner} with ${percentage.toFixed(2)}%`;
+    }
+
+    // Run the calculation when the page loads
+    calculateWinner();
+  </script>
+</body>
+</html>
