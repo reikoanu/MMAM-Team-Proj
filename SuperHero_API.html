@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marvel vs DC Superhero Battle</title>
+  <title>Hero vs Hero Battle</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -45,8 +45,10 @@
 </head>
 <body>
   <header>
-    <h1>Marvel vs DC Superhero Battle</h1>
+    <h1>Hero vs Hero Superhero Battle</h1>
   </header>
+
+  <a href="/SuperHeroGame.html">Guess Who Will Win!</a>
 
   <div id="marvel hero" class="container">
     <div class="hero" id="marvel">
@@ -54,14 +56,7 @@
       <img src="" alt = "Marvel Hero">
       <p>Bio: Some information about the Marvel hero.</p>
       <p></p>
-      <ul id = "marvel stats">
-        <li>Strength: <span id="marvel-strength">80%</span></li>
-        <li>Magic: <span id="marvel-magic">70%</span></li>
-        <li>Speed: <span id="marvel-speed">85%</span></li>
-        <li>Intelligence: <span id="marvel-intelligence">90%</span></li>
-        <li>Power: <span id="marvel-power">75%</span></li>
-        <li>Durability: <span id="marvel-durability">75%</span></li>
-      </ul>
+      <button id="marvelBtn">Compare Again!</button>
     </div>
 
     <div class="hero" id="dc">
@@ -69,14 +64,8 @@
       <img src="" alt="DC Hero">
       <p>Bio: Some information about the DC hero.</p>
       <p></p>
-      <ul id = "dc stats">
-        <li>Strength: <span id="dc-strength">75%</span></li>
-        <li>Magic: <span id="dc-magic">80%</span></li>
-        <li>Speed: <span id="dc-speed">88%</span></li>
-        <li>Intelligence: <span id="dc-intelligence">85%</span></li>
-        <li>Power: <span id="dc-power">80%</span></li>
-        <li>Durability: <span id="dc-durability">80%</span></li>
-      </ul>
+
+      <button id="dcBtn">Compare Again!</button>
     </div>
   </div>
 
@@ -85,40 +74,6 @@
   <script src="load.js">
   </script>
   <script src="comparison2.js">
-    // // Calculate the winner based on percentage values
-    // function calculateWinner() {
-    //   const marvelTotal = calculateTotal('marvel');
-    //   const dcTotal = calculateTotal('dc');
-
-    //   if (marvelTotal > dcTotal) {
-    //     displayWinner('Marvel', marvelTotal);
-    //   } else {
-    //     displayWinner('DC', dcTotal);
-    //   }
-    // }
-
-    // // Calculate the total percentage for a hero
-    // function calculateTotal(hero) {
-    //   const strength = parseInt(document.getElementById(`${hero}-strength`).innerText);
-    //   const magic = parseInt(document.getElementById(`${hero}-magic`).innerText);
-    //   const speed = parseInt(document.getElementById(`${hero}-speed`).innerText);
-    //   const intelligence = parseInt(document.getElementById(`${hero}-intelligence`).innerText);
-    //   const power = parseInt(document.getElementById(`${hero}-power`).innerText);
-
-    //   return (strength + magic + speed + intelligence + power) / 5;
-    // }
-
-    // // Display the winner and their total percentage
-    // function displayWinner(winner, percentage) {
-    //   const resultElement = document.getElementById('result');
-    //   const winnerElement = document.getElementById('winner');
-
-    //   resultElement.style.color = '#333';
-    //   winnerElement.innerText = `${winner} with ${percentage.toFixed(2)}%`;
-    // }
-
-    // // Run the calculation when the page loads
-    // calculateWinner();
   </script>
 
 

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marvel vs DC Superhero Battle</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+      font-size: 1.5em;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+
+    .hero {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px;
+      width: 300px;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hero vs Hero Battle</h1>
+    <h3>Who do you think will win?</h2>
+  </header>
+
+  <a href="SuperHero_API.html">Random Comparison!</a>
+
+  <div id="marvel hero" class="container">
+    <div class="hero" id="marvel">
+      <h2>Marvel Hero</h2>
+      <img src="" alt = "Marvel Hero">
+      <p>Bio: Some information about the Marvel hero.</p>
+      <p></p>
+      <button id="marvelBtn">Select</button>
+      <button id="marvelTie" name ="0">Tie</button>
+    </div>
+
+    <div class="hero" id="dc">
+      <h2>DC Hero</h2>
+      <img src="" alt="DC Hero">
+      <p>Bio: Some information about the DC hero.</p>
+      <p></p>
+      <button id="dcBtn">Select</button>
+      <button id="dcTie" name = "0">Tie</button>
+    </div>
+  </div>
+
+  <div class="result" id="result"></div>
+  <button id="reset">Try again!</button>
+  <script src="game.js">
+  </script>
+  <script src="comparison2.js">
+  </script>
+
+
+</body>
+</html>

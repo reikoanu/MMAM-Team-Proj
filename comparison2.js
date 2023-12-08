@@ -45,4 +45,4 @@ function compareHeroes(hero1Id, hero2Id) {
   }
   
   // Example usage:
-  compareHeroes(1, 2);  
+  //compareHeroes(1, 2);  

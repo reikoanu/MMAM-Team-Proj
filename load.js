@@ -82,29 +82,6 @@ function loadDetails(heroid, comic) {
       bio[0].innerHTML = "Occupation : " + data.work.occupation;
       bio[1].innerHTML = "Affiliations : " + data.connections["group-affiliation"]
 
-
-      var powStatUL = document.getElementById(statid);
-      console.log(powStatUL)
-      var powStat = powStatUL.getElementsByTagName('li')
-
-      var intelligence = data.powerstats.intelligence == 'null' ? 0 : data.powerstats.intelligence
-      powStat[0].innerHTML = "Intelligence : " + intelligence;
-
-      var strength = data.powerstats.strength == 'null' ? 0 : data.powerstats.strength
-      powStat[1].innerHTML = "Strength : " + strength
-
-      var speed = data.powerstats.speed == 'null' ? 0 : data.powerstats.speed
-      powStat[2].innerHTML = "Speed : " + speed;
-
-      var durability = data.powerstats.durability == 'null' ? 0 : data.powerstats.durability
-      powStat[3].innerHTML = "Durability : " + durability
-
-      var power = data.powerstats.power == 'null' ? 0 : data.powerstats.power
-      powStat[4].innerHTML = "Power : " + power;
-
-      var combat = data.powerstats.combat == 'null' ? 0 : data.powerstats.combat
-      powStat[5].innerHTML = "Combat : " + combat;
-
       var img = div.getElementsByTagName('img');
       img[0].setAttribute('src', data.image.url)
 
