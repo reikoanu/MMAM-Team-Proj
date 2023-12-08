@@ -47,14 +47,13 @@
   <header>
     <h1>Hero vs Hero Battle</h1>
     <h3>Who do you think will win?</h2>
+      <button onclick="window.location.href='SuperHero_API.html';" class="button">Random Comparison!</button>
   </header>
-
-  <a href="SuperHero_API.html">Random Comparison!</a>
 
   <div id="marvel hero" class="container">
     <div class="hero" id="marvel">
       <h2>Marvel Hero</h2>
-      <img src="" alt = "Marvel Hero">
+      <img src="" alt = "Marvel Hero" width="300px">
       <p>Name</p>
       <p>Bio: Some information about the Marvel hero.</p>
       <p>Affiliation</p>
@@ -62,9 +61,15 @@
       <button id="marvelTie" name ="0">Tie</button>
     </div>
 
+    <div>
+    <div class="result" id="result"></div>
+    <br>
+    <button id="reset">Try again!</button>
+  </div>
+
     <div class="hero" id="dc">
       <h2>DC Hero</h2>
-      <img src="" alt="DC Hero">
+      <img src="" alt="DC Hero" width="300px">
       <p>Name</p>
       <p>Bio: Some information about the DC hero.</p>
       <p>Affiliation</p>
@@ -73,8 +78,6 @@
     </div>
   </div>
 
-  <div class="result" id="result"></div>
-  <button id="reset">Try again!</button>
   <script src="game.js">
   </script>
   <script src="comparison2.js">

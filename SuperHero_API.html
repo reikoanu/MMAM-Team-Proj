@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,23 +42,34 @@
       font-size: 1.2em;
       font-weight: bold;
     }
+
+    .button {
+      background-color: white;
+      color: black;
+      border: 2px solid #555555;
+    }
+
+    .button:hover {
+      background-color: #555555;
+      color: white;
+    }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Hero vs Hero Superhero Battle</h1>
+    <button onclick="window.location.href='SuperHeroGame.html';" class="button">Random Comparison!</button>
   </header>
-
-  <a href="/SuperHeroGame.html">Guess Who Will Win!</a>
 
   <div id="marvel hero" class="container">
     <div class="hero" id="marvel">
       <h2>Marvel Hero</h2>
-      <img src="" alt = "Marvel Hero">
+      <img src="" alt="Marvel Hero" width="300px">
       <p>Name</p>
       <p>Bio: Some information about the Marvel hero.</p>
       <p>Affiliation</p>
-      <ul id = "marvel stats">
+      <ul id="marvel stats">
         <li>Strength: <span id="marvel-strength">80%</span></li>
         <li>Magic: <span id="marvel-magic">70%</span></li>
         <li>Speed: <span id="marvel-speed">85%</span></li>
@@ -66,13 +78,20 @@
         <li>Durability: <span id="marvel-durability">75%</span></li>
     </div>
 
+    <div class="result" id="result">The winner is: 
+      <br><span id="winner">?</span>
+      <br><br>
+      <button id="compareBtn">Compare Again!</button>
+    </div>
+
+
     <div class="hero" id="dc">
       <h2>DC Hero</h2>
-      <img src="" alt="DC Hero">
+      <img src="" alt="DC Hero" width="300px">
       <p>Bio: Some information about the DC hero.</p>
       <p></p>
       <p></p>
-      <ul id = "dc stats">
+      <ul id="dc stats">
         <li>Strength: <span id="dc-strength">75%</span></li>
         <li>Magic: <span id="dc-magic">80%</span></li>
         <li>Speed: <span id="dc-speed">88%</span></li>
@@ -82,8 +101,7 @@
     </div>
   </div>
 
-  <div class="result" id="result">The winner is: <span id="winner">?</span></div>
-  <button id="compareBtn">Compare Again!</button>
+
   <script src="load.js">
   </script>
   <script src="comparison2.js">
@@ -91,4 +109,5 @@
 
 
 </body>
+
 </html>
