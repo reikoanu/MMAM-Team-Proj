@@ -21,6 +21,9 @@ window.onload = () => {
     loadDetails(marvelHero, 'Marvel Comics');
     loadDetails(dcHero, 'DC Comics');
 
+    //reset correct/wrong text
+    var windiv = document.getElementById('result').innerText = ""
+
   }
 
   function loadWinner(button) {
@@ -87,8 +90,9 @@ function loadDetails(heroid, comic) {
       console.log(data.name)
 
       var bio = div.getElementsByTagName('p')
-      bio[0].innerHTML = "Occupation : " + data.work.occupation;
-      bio[1].innerHTML = "Affiliations : " + data.connections["group-affiliation"]
+      bio[0].innerHTML = "Name : " + data.biography['full-name'];
+      bio[1].innerHTML = "Occupation : " + data.work.occupation;
+      bio[2].innerHTML = "Affiliations : " + data.connections["group-affiliation"]
 
       var img = div.getElementsByTagName('img');
       img[0].setAttribute('src', data.image.url)
