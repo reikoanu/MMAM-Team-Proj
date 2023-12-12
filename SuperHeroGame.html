@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,8 +42,20 @@
       font-size: 1.2em;
       font-weight: bold;
     }
+
+    .button {
+      background-color: white;
+      color: black;
+      border: 2px solid #555555;
+    }
+
+    .button:hover {
+      background-color: #555555;
+      color: white;
+    }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Hero vs Hero Battle</h1>
@@ -53,19 +66,19 @@
   <div id="marvel hero" class="container">
     <div class="hero" id="marvel">
       <h2>Marvel Hero</h2>
-      <img src="" alt = "Marvel Hero" width="300px">
+      <img src="" alt="Marvel Hero" width="300px">
       <p>Name</p>
       <p>Bio: Some information about the Marvel hero.</p>
       <p>Affiliation</p>
       <button id="marvelBtn">Select</button>
-      <button id="marvelTie" name ="0">Tie</button>
+      <button id="marvelTie" name="0">Tie</button>
     </div>
 
     <div>
-    <div class="result" id="result"></div>
-    <br>
-    <button id="reset">Try again!</button>
-  </div>
+      <div class="result" id="result"></div>
+      <br>
+      <button id="reset">Try again!</button>
+    </div>
 
     <div class="hero" id="dc">
       <h2>DC Hero</h2>
@@ -74,7 +87,7 @@
       <p>Bio: Some information about the DC hero.</p>
       <p>Affiliation</p>
       <button id="dcBtn">Select</button>
-      <button id="dcTie" name = "0">Tie</button>
+      <button id="dcTie" name="0">Tie</button>
     </div>
   </div>
 
@@ -85,4 +98,5 @@
 
 
 </body>
+
 </html>
